@@ -40,4 +40,3 @@ REFERENCES `role` (`id`);
 
 ALTER TABLE `employee` ADD CONSTRAINT `fk_employee_manager_id` FOREIGN KEY(`manager_id`)
 REFERENCES `employee` (`id`);
-
