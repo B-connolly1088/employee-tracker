@@ -25,6 +25,13 @@ const db = mysql.createConnection(
 async function init() {
     const ans = await inquirer.prompt(questions.mainQuestion)
     console.log(ans);
+    // const addEmpAns = await inquirer.prompt(questions.addEmpQ)
+    // console.log(addEmpAns);
+    // const addEmpRollAns = await inquirer.prompt(questions.addEmpRollAns)
+    // console.log(addEmpRollAns);
+    // const updateEmpRollAns = await inquirer.prompt(questions.updateEmpRollQ)
+    // console.log(questions.updateEmpRollAns)
+
 
     // const results = await query("SELECT * FROM department")
     // console.table(results);
@@ -34,14 +41,32 @@ async function init() {
 
     switch (ans.choice) {
         case "view all departments":
-            await dpt.get(init)
+            await dpt.get(init);
             break;
             case "view all roles":
-                await role.get(init)
-                break;
+            await role.get(init);
+            break;
+            case "view all employees":
+            await emp.get(init);
+            break;
+            case "add a department":
+            await dpt.get(init);
+            break;
+            case "add a role":
+            await role.create(init, inquirer, questions.addRoleQ);
+            break;
+            case "add an employee":
+            await emp.get(addEmpAns);
+            break;
+            case "update an employee role":
+            await role.get(updateEmpRollAns);
+            break;
         default:
             break;
     }
     
 }
+
+
+
 init();
