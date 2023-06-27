@@ -50,16 +50,16 @@ async function init() {
             await emp.get(init);
             break;
             case "add a department":
-            await dpt.get(init);
+            await dpt.create(init, inquirer, questions.addDptQ);
             break;
             case "add a role":
             await role.create(init, inquirer, questions.addRoleQ);
             break;
             case "add an employee":
-            await emp.get(addEmpAns);
+            await emp.create(init, inquirer, questions.addEmpQ);
             break;
             case "update an employee role":
-            await role.get(updateEmpRollAns);
+            await emp.update(init, inquirer, questions.updateEmpRollQ);
             break;
         default:
             break;
