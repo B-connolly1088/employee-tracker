@@ -4,6 +4,7 @@
 Employee Tracker
 ## Description
 This CLI application was designed to give an employer an easy to use interface to add and modify employee information. This application also allows an employer to add departments, employee roles and salaries to their roster. This application was built in JavaScript and utilizes the dotenv, Inquirer, and mySQL2 dependencies. In this build I was able to gain real world experience in developing an application that many companies might request an employee to build to help streamline an HR departments workload.
+![Walkthrough Video](https://drive.google.com/file/d/1AJEpG3iPt74a3Fg7VX2r2UOInle50KX2/view)
 ## Table of Contents
 - [Usage](#Usage)
 - [License](#license)
